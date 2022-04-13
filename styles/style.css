@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,13 +31,13 @@ body{
 }
 
 .left{
-    width: 500px;
-    align-items: flex-start;
+    width:500px;
+    align-items: flex-start
 }
 
 /* todas as img da classe left terão esse estilo */
 .left img{
-    height: 106px;
+    height: 106px
 }
 
 /* todos os parágrafos da classe left terão esse estilo */
@@ -45,23 +45,23 @@ body{
     font-size: 30px;
     color: #1c1e21;
     height: 200px;
-    font-family: 'Roboto Condensed', sans-serif;
-    position: relative;
-    left: 27px;
+    font-family:'Roboto Condensed', sans-serif;
+    position:relative;
+    left:27px
 }
 
 .right{
-    width: 400px;
+    width:400px;
 }
 
 form{
     background-color: white;
     border-radius: 10px;
     width: 400px;
-    display: flex;
+    display:flex;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 form input{
@@ -70,10 +70,17 @@ form input{
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #999;
+    outline: none;
+    font-size: 16px;
+}
+
+
+form input:focus{
+    border: 1px solid #1877f2;
 }
 
 .right__loginBtn{
-    background-color: #1877f2;
+    background-color:#1877f2;
     padding: 15px;
     text-align: center;
     text-decoration: none;
@@ -82,23 +89,24 @@ form input{
     color: white;
     font-family: 'Arial';
     font-weight: 700;
-    transition: 0.5s;
+    transition:0.5s;
 }
 
 .right__loginBtn--hover:hover{
-    background-color: #4257b2;
+    background-color: #4257b2
 }
+
 
 .right__forget{
     margin: 15px 0;
     text-decoration: none;
     color: #1877f2;
     font-family: 'Arial';
-    font-size: 14px;
+    font-size:14px;
 }
 
 .right__sign-up{
-    padding: 20px;
+    padding-top: 20px;
     border-top: 1px solid #999;
     width: 100%;
     display: flex;
@@ -106,8 +114,8 @@ form input{
 }
 
 .right__signupBtn{
-    background-color: #42b72a;
-    padding: 15px;
+    background-color:#42b72a;
+    padding:15px ;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -115,14 +123,80 @@ form input{
     font-size: 17px;
     font-family: 'Arial';
     font-weight: 600;
-    transition: 0.5s;
+    transition:0.5s;
 }
 
 .right__signupBtn:hover{
-    background-color: green;
+    background-color: green
 }
 
 .right p{
-    font-size: 15px;
+    font-size:15px;
     font-family: 'Arial';
 }
+
+@media(max-width:950px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .left{
+        width:400px;
+        align-content:center;
+        align-items:center;
+    }
+
+    .left p{
+        height: 75px;
+        font-size: 20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .right{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center
+    }
+
+    
+    form{
+        width:350px;
+        align-content: center;
+        align-items:center;
+    }
+}
+
+@media(max-width:300px){
+    .right{
+        display: flex;
+        justify-content:center;
+    }
+
+    .left{
+        display: flex;
+        justify-content: center;
+    }
+
+    .left img{
+        height: 95px;
+        
+    }
+
+    form{
+        width:250px;
+        align-content: center;
+        align-items:center;
+    }
+
+    .left p, .right p{
+        display: none;
+    }
+
+    form input, .right__forget, .right__loginBtn, .right__signupBtn{
+        font-size: 12px;
+    }
